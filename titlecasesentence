@@ -1,0 +1,20 @@
+
+
+function titleCase(str) {
+  var newString = str.split(" ");
+  var finalString = [];
+  
+  for(var i = 0; i < newString.length; i++) {
+    
+  finalString.push(newString[i][0].toUpperCase() + (newString[i].substr (1, newString.length+1).toLowerCase()));
+  
+  }
+  
+  var result = finalString.join();
+  var final = result.replace(/,/g, " ");
+  
+  return(final);
+
+  
+// console.log(finalString);
+}
