@@ -1,0 +1,17 @@
+function palindrome(str) {
+  
+  var newString = str.toLowerCase();
+  var newestString = newString.replace(/[^A-Z0-9]/ig, "");
+  var finalString = "";
+  
+  for(var i = newestString.length-1; i >= 0; i--) {
+    (finalString += newestString[i]);
+  }
+ console.log(finalString);
+  
+  if (finalString === newestString) {
+    return true;
+  } else {
+    return false;
+  }
+}
