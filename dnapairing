@@ -1,0 +1,34 @@
+//string to Array (this will be umbrella array)
+// if charAt(i) = "A" > Array.push[charat(i), "T";
+// if charAt(i) = "T" > Array.push[charat(i), "A";
+// if charAt(i) = "C" > Array.push[charat(i), "G"; 
+// if charAt(i) = "G" > Array.push[charat(i), "C";
+
+function pairElement(str) {
+  
+var myArray = str.split("");
+var finalArray = [];
+
+for(var i = 0; i < myArray.length; i++) {
+  
+
+  if(myArray[i] === "A") {
+  finalArray.push([myArray[i], "T"]);
+  
+  } else if(myArray[i] === "T") {
+  finalArray.push([myArray[i], "A"]);
+  
+  } else if(myArray[i] === "C") {
+  finalArray.push([myArray[i], "G"]);
+  
+  } else if(myArray[i] === "G") {
+  finalArray.push([myArray[i], "C"]);
+
+}
+}
+
+return finalArray;
+
+
+}
+pairElement("GCG");
