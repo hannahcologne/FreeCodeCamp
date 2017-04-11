@@ -1,0 +1,14 @@
+  function mutation(arr) {
+    
+  var arrayZero = arr[0].toLowerCase();
+  var arrayOne = arr[1].toLowerCase();
+  
+   for (var i = 0; i < arrayOne.length; i++) {
+     if (arrayZero.indexOf(arrayOne.charAt(i)) == -1) {
+     return false;
+     } 
+   } return true;
+
+}
+
+mutation(["Mary", "Aarmy"]);
