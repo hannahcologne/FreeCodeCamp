@@ -1,0 +1,12 @@
+function destroyer(arr) {
+  // Remove all the values
+  var myArguments = Array.from(arguments);
+  var myArray = [];
+  
+  for(var i = 0; i < arr.length; i++) {
+    
+     if(arr[i] !== myArguments[1] && arr[i] !== myArguments[2] && arr[i] !== myArguments[3]) 
+     myArray.push(arr[i]);  
+
+     }   return myArray;
+  }
