@@ -1,0 +1,26 @@
+
+function rot13(str) { // LBH QVQ VG!
+var codeA = "A".charCodeAt(0);
+var codeN = "N".charCodeAt(0);
+var codeZ = "Z".charCodeAt(0);
+var newArray = [];
+
+ for (var i = 0; i < str.length; i++) {
+ var codeAt = str.charCodeAt(i);
+
+    if(codeAt >= codeA && codeAt <= codeZ){
+        if(codeAt >= codeN)
+        
+            newArray.push(String.fromCharCode(codeAt-13));
+        else
+            newArray.push(String.fromCharCode(codeAt+13));
+    } else {
+        newArray.push(str[i]);}
+        
+} 
+
+var uniCode = newArray.toString();
+
+uniCode = uniCode.split(',').join("");
+return(uniCode);
+}
