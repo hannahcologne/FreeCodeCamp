@@ -1,0 +1,34 @@
+
+
+function uniteUnique(arr) {
+var finalArray = [];
+
+for(var i = 0; i < arguments[0].length; i++) {
+finalArray.push(arguments[0][i]);
+}
+
+for(var j = 0; j < arguments[1].length; j++) {
+if(finalArray.indexOf(arguments[1][j]) === -1) {  
+finalArray.push(arguments[1][j]);
+}
+}
+if(arguments.length > 2) {
+for(var k = 0; k < arguments[2].length; k++) {
+if(finalArray.indexOf(arguments[2][k]) === -1) {  
+finalArray.push(arguments[2][k]);
+}
+}
+}
+
+if(arguments.length > 3) {
+for(var l = 0; l < arguments[3].length; l++) {
+if(finalArray.indexOf(arguments[3][l]) === -1) {  
+finalArray.push(arguments[3][l]);
+}
+}
+}
+return finalArray;
+
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
