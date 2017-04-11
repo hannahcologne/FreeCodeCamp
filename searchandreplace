@@ -1,0 +1,33 @@
+
+function myReplace(str, before, after) {
+
+var wordToReplace;
+var indexOf;
+var newString;
+
+var myArray = str.split(" ");
+
+for(var i = 0; i < myArray.length; i++) {
+
+  if(myArray[i] == before) {
+    wordToReplace = myArray[i];
+    indexOf = (myArray.indexOf(myArray[i]));
+  }
+
+} 
+
+if (before[0] === before[0].toLowerCase()) {
+  after = after[0].toLowerCase() + after.slice(1).toLowerCase();
+  
+} else if (before[0] === before[0].toUpperCase()) {
+  after = after[0].toUpperCase() + after.slice(1).toLowerCase();
+}
+
+myArray.splice(indexOf, 1, after);
+
+newString = myArray.join(" ");
+
+return(newString);
+
+
+}
