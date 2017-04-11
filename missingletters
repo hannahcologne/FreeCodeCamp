@@ -1,0 +1,23 @@
+function fearNotLetter(str) {
+var myArray = [];
+var index;
+
+
+// Push all CharCodeCharacters to new Array
+
+for(var i = 0; i < str.length; i++) {
+  myArray.push(str.charCodeAt(i));
+  }
+
+// loop through array, if [j]-[j-1] is not equal to one, this value should be stored in the index variable
+
+for(var j = myArray.length-1; j >= 1; j--) {
+  
+  if (myArray[j] - myArray[j-1] !== 1) {
+  index = String.fromCharCode(myArray[j] - 1);
+  return index;
+  } 
+}
+}
+
+fearNotLetter("abcdefghijklmno");
