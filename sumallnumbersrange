@@ -1,0 +1,25 @@
+
+function sumAll(arr) {
+  
+var myMax = arr.reduce(function(a, b) {
+    return Math.max(a, b);
+});
+
+var myMin = arr.reduce(function(a, b) {
+    return Math.min(a, b);
+});
+
+var newArray = [];
+
+for (var i = myMin; i <= myMax; i++) {
+  newArray.push(i);
+}
+
+var myResult = newArray.reduce( (prev, curr) => prev + curr );
+
+return myResult;
+
+}
+
+
+
