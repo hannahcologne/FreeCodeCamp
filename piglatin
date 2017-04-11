@@ -1,0 +1,27 @@
+function translatePigLatin(str) {
+
+var myArray = str.split("");
+var newString;
+var indexOf;
+var finalArray;
+
+for(var i = 0; i < myArray.length; i++) {
+  
+  if (myArray.indexOf("a") === 0 || myArray.indexOf("e") === 0 || myArray.indexOf("u") === 0 || myArray.indexOf("o") === 0 || myArray.indexOf("i") === 0) {
+    myArray.push("way");
+    break;
+    
+  } else if(myArray[i] == ("a") || myArray[i] == ("e") || myArray[i] == ("o") || myArray[i] == ("i") || myArray[i] == ("u")) { 
+   indexOf = myArray.indexOf(myArray[i]);
+   myArray.push(myArray.slice(0, indexOf).join("") + "ay");
+   break;
+   
+  }
+}
+finalArray = myArray.slice(indexOf, myArray.length);
+newString = finalArray.join("");
+return newString;
+
+}
+
+translatePigLatin("algorithm")
