@@ -1,0 +1,14 @@
+
+function repeatStringNumTimes(str, num) {
+  var newString = str;
+	for (var count = 0; count < num-1; count++) {
+	  newString += str;
+	}
+	if(num > 0) {
+	  return(newString);
+	} else
+	return '';
+}
+	
+
+repeatStringNumTimes("abc", 3);
