@@ -1,0 +1,21 @@
+function convertHTML(str) {
+var myString;
+  
+var newObj = {
+   '&':'&amp;',
+   '<':'&lt;',
+   '>':'&gt;',
+   '"':'&quot;',
+   "'": '&apos;',
+};
+
+myString = str.replace(/&|<|>|"|'/gi, function(matched){
+return newObj[matched];
+
+});
+
+return myString;
+
+}
+
+convertHTML("Dolce & Gabbana"); 
