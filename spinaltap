@@ -1,0 +1,19 @@
+ 
+function spinalCase(str) {
+
+var myString = str.replace(/([a-z])([A-Z])/g, '$1 $2');
+var myNewString = myString.replace(/-/g, " ");
+var myNewerString = myNewString.replace(/_/g, " ");
+var myNewestString = myNewerString.split(" ").join("-");
+
+return myNewestString.toLowerCase();
+
+}
+
+spinalCase("The_Andy_Griffith_Show") //should return "all-the-small-things"
+ 
+ 
+ 
+ 
+ 
+ 
