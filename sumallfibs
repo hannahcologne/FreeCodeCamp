@@ -1,0 +1,35 @@
+//find out the fibonacci numbers
+// create new array
+// write a for loop to make sure that the odee numbers (where %2 !== 1) are pushed to
+
+
+function sumFibs(num) {
+var myNewArray = [];
+// find all fibonacci numbers until (num) and push them to array
+var fibonacciNumber = 0, x = 1, y = 1;
+var myArray = [];
+    for(var i = 2; i <= num; i++) {
+        y = fibonacciNumber + x;
+        fibonacciNumber = x;
+        x = y;
+        myArray.push(fibonacciNumber);
+    }
+        
+// push all odd numbers to new array
+
+for(var j = 0; myArray[j] < num; j++) {
+      if(myArray[j]%2 !== 0) {
+       myNewArray.push(myArray[j]);
+      }
+}
+
+// reduce that array to one number (sum of all odds)
+
+var myFinalNumber = myNewArray.reduce(function(previousVal, currentVal) {
+  return previousVal + currentVal;
+}, 0);
+
+return myFinalNumber;
+}
+
+sumFibs(5)
